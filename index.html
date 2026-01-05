@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Miguel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f7;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    header p {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* Acordeón genérico */
+    .acordeon {
+      margin-bottom: 1rem;
+    }
+
+    .acordeon-boton {
+      width: 100%;
+      text-align: left;
+      background: #ecf0f1;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .acordeon-boton:hover {
+      background: #d0d7de;
+    }
+
+    .acordeon-contenido {
+      display: none;
+      background: white;
+      padding: 1rem;
+      margin-top: 0.4rem;
+      border-left: 4px solid #2c3e50;
+      border-radius: 0 0 6px 6px;
+    }
+
+    /* Himnos */
+    .himno {
+      margin-top: 0.6rem;
+    }
+
+    .himno-titulo {
+      display: block;
+      background: #f1f3f4;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 0.8rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #2c3e50;
+    }
+
+    .himno-titulo:hover {
+      background: #d0d7de;
+    }
+
+    .himno-contenido {
+      display: none;
+      padding: 0.8rem;
+      background: #ffffff;
+      margin-top: 0.3rem;
+      border-left: 3px solid #2c3e50;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+
+      .acordeon-boton {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Página Miguel</h1>
+    <p>Miguel Martínez – Himnos y escritos....</p>
+  </header>
+
+  <main>
+
+    <!-- HIMNOS -->
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">🎼 Himnos – Coro y Orquesta</button>
+      <div class="acordeon-contenido">
+        <div class="himno">
+          <a class="himno-titulo" href="archivos/himnos/Coro_y_orquesta/Corona de espinas.rar" download>
+            🎵 Corona de espinas
+          </a>
+          <a class="himno-titulo" href="archivos/himnos/Coro_y_orquesta/Cantar al Señor.rar" download>
+            🎵 Cantar al Señor
+          </a>
+          <a class="himno-titulo" href="archivos/himnos/Coro_y_orquesta/Dios está en control.rar" download>
+            🎵 Dios está en control
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">🎼 Himnos – Coro</button>
+      <div class="acordeon-contenido">
+
+        <div class="himno">
+          <a class="himno-titulo" href="archivos/himnos/Coro/Apareces Jesús.rar" download>
+            🎵 Apareces Jesús
+          </a>
+          <a class="himno-titulo" href="archivos/himnos/Coro/No hay lugar.rar" download>
+            🎵 No hay lugar
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">🎼 Himnos – Orquesta</button>
+      <div class="acordeon-contenido">
+
+        <div class="himno">
+          <a class="himno-titulo" href="archivos/himnos/Orquesta/Aleluya Amen.rar" download>
+            🎵 Aleluya, Amén
+          </a>
+          <a class="himno-titulo" href="archivos/himnos/Orquesta/Maravillosa Gracia.rar" download>
+            🎵 Maravillosa Gracia
+          </a>
+          <a class="himno-titulo" href="archivos/himnos/Orquesta/Te desvías por el mar.rar" download>
+            🎵 Te desvías por el mar
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- LIBROS -->
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">📚 Libros</button>
+      <div class="acordeon-contenido">
+        <ul>
+          <li><a href="archivos/libros/Pioneros - 2da Edición - 2025.pdf">Pioneros 2° edición - 2025</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MEDITACIONES -->
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">📚 Apuntes</button>
+      <div class="acordeon-contenido">
+        <ul>
+          <li><a href="archivos/apuntes/Apuntes Cristianos 1.pdf">Apuntes 1</a></li>
+        </ul>
+        <ul>
+          <li><a href="archivos/apuntes/Apuntes Cristianos 2.pdf">Apuntes 2</a></li>
+        </ul>
+        <ul>
+          <li><a href="archivos/apuntes/Apuntes Cristianos 3.pdf">Apuntes 3</a></li>
+        </ul>
+        <ul>
+          <li><a href="archivos/apuntes/Apuntes Cristianos 4 .pdf">Apuntes 4</a></li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- SOBRE EL AUTOR -->
+    <div class="acordeon">
+      <button class="acordeon-boton" onclick="toggleAcordeon(this)">👤 Sobre Miguel....</button>
+      <div class="acordeon-contenido">
+        <p><strong>Miguel Martínez</strong> ....</p>
+        <ul>
+          <li>Himnos para coro, orquesta y coro con orquesta</li>
+          <li>.....</li>
+          <li>....</li>
+          <li>...</li>
+        </ul>
+        <p>......</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Uso libre......
+  </footer>
+
+  <script>
+    function toggleAcordeon(btn) {
+      const contenido = btn.nextElementSibling;
+      const visible = contenido.style.display === 'block';
+
+      document.querySelectorAll('.acordeon-contenido').forEach(c => c.style.display = 'none');
+      contenido.style.display = visible ? 'none' : 'block';
+    }
+
+    // toggleHimno eliminado: los himnos descargan directamente(btn) 
+    {
+      const contenido = btn.nextElementSibling;
+      const visible = contenido.style.display === 'block';
+
+
+      contenido.style.display = visible ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+
+</html>
